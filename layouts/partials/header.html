@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+
+<head>
+    <meta charset="utf-8">
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+    {{ hugo.Generator }} {{ $style := resources.Get "css/main.scss" | resources.ExecuteAsTemplate "css/main.scss" . | resources.ToCSS | resources.Minify | resources.Fingerprint -}}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/monokai.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+    {{ if .Params.katex }}{{ partial "katex.html" . }}{{ end }}
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="navbar">
+            {{ if (and .IsPage (.Site.Params.contentProgress | default true)) }}
+            <progress class="content_progress" max="0" value="0"></progress> {{ end }}
+            <div class="container">
+                <div class="navbar-header header-back2home-logo">
+                    <span class="logo_mark">>$</span>
+                    <a href="{{ .Site.BaseURL }}">
+                        <span class="logo_text">cd /home/</span>
+                        <span class="logo_cursor"></span>
+                    </a>
+                </div>
+                <div class="navbar-right">
+                    {{ $currentPage := . }}
+                    <span class="menu">
+                        {{ range .Site.Menus.main }}
+                        <a class="menu-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}"
+                            href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+                        {{ end }}
+                    </span>
+                </div>
+            </div>
+        </nav>
+        <main>

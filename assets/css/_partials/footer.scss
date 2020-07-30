@@ -1,0 +1,15 @@
+  /**Footer**/
+  
+  .copyright {
+      font-size: 14px;
+      text-align: center;
+      line-height: 4rem;
+      a {
+          color: #a9a9b3;
+          text-decoration: none;
+          transition: color .2s ease, border-color .2s ease, background .2s ease, opacity .2s ease;
+      }
+      a:hover {
+          color: #eee;
+      }
+  }

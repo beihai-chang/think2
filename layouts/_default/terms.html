@@ -1,0 +1,11 @@
+{{ partial "header.html" . }}
+
+<h1>{{ .Title }}</h1>
+
+{{ $baseurl := .Site.BaseURL }}
+{{ $plural := .Data.Plural }}
+{{ range $key, $value := .Data.Terms }}
+<a href="{{ $baseurl }}/{{ $plural }}/{{ $key }}">{{ $key }}</a>
+{{ end }}
+
+{{ partial "footer.html" . }}
