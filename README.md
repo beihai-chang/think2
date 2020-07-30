@@ -1,1 +1,3 @@
-think2
+# think2
+
+A clean, elegant theme for hugo.
