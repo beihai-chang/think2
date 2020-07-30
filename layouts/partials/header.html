@@ -11,6 +11,14 @@
     <script>
         hljs.initHighlightingOnLoad();
     </script>
+    {{ range .Site.Params.googlefonts }}
+       <link rel="stylesheet" {{ printf "href=\"//fonts.googleapis.com/css?family=%s\"" . | safeHTMLAttr }} type="text/css" media="all" />
+     {{ end }}
+    <style>
+        html {
+            font-family: '{{ .Site.Params.fontbody }}', sans-serif;
+        }
+    </style>
     {{ if .Params.katex }}{{ partial "katex.html" . }}{{ end }}
 </head>
 
