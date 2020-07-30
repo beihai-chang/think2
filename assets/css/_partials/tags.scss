@@ -1,0 +1,23 @@
+.tag-cloud-tags {
+    margin: 10px 0;
+    a {
+        display: inline-block;
+        position: relative;
+        margin: 5px 10px;
+        word-wrap: break-word;
+        transition-duration: .3s;
+        transition-property: transform;
+        transition-timing-function: ease-out;
+        &:active,
+        &:focus {
+            color: #a9a9b3;
+        }
+        &:hover {
+            color: #fff;
+            transform: scale(1.1);
+        }
+        small {
+            color: #fff;
+        }
+    }
+}

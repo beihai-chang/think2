@@ -8,10 +8,22 @@
 }
 
 .navbar {
+    .navbar-right a {
+        padding: 0 8px;
+    }
+    .header-logo a {
+        padding: 0;
+        i {
+            line-height: 2em;
+        }
+    }
     a {
         color: #a9a9b3;
         text-decoration: none;
         transition: color .2s ease, border-color .2s ease, background .2s ease, opacity .2s ease;
+    }
+    a:hover {
+        color: #eee;
     }
     height: 4rem;
     line-height: 4rem;
@@ -57,8 +69,16 @@
             font-family: 'Lobster', cursive;
         }
         .header-back2home-logo {
+            a:hover {
+                color: #fe5186;
+            }
             font-weight: bold;
-            font-family: 'Fira Code', Consolas, Monaco, Menlo, Consolas, monospace;
+            font-family: 'Fira Code',
+            Consolas,
+            Monaco,
+            Menlo,
+            Consolas,
+            monospace;
             .logo_mark {
                 color: #23d18b;
             }

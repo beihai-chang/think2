@@ -1,7 +1,9 @@
 {{ partial "header.html" . }}
 
-{{ range .Site.RegularPages }}
-<a href="{{ .Permalink }}">{{ .Title }}</a>
-{{ end }}
+<div class="list-wrapper">
+    <div class="list">
+        {{ range (where $.Site.Pages "Type" "posts") }} {{ if ne .Page.Title "Posts" }} {{ partial "list-item.html" . }} {{ end }} {{ end }}
+    </div>
+</div>
 
 {{ partial "footer.html" . }}

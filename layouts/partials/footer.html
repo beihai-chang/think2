@@ -1,17 +1,14 @@
+</div>
 </main>
 <div class="copyright">
-    &copy;
     {{ with .Site.Params.since }}
-    <span itemprop="copyrightYear">{{.}} - {{ now.Year }}</span>
-    {{ end }}
+    <span itemprop="copyrightYear">{{.}} - {{ now.Year }}</span> {{ end }}
     <span class="with-love">
         <i class="iconfont icon-love"></i>
-    </span>
-    {{ if .Site.Params.author }}
+    </span> {{ if .Site.Params.author }}
     <span class="author" itemprop="copyrightHolder"><a href="{{ .Site.BaseURL }}">{{ .Site.Params.author  }}</a> |
-    </span>
-    {{ end }}
-    <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a>
+    </span> {{ end }}
+    <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a></span>
 </div>
 </div>
 </body>
