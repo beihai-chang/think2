@@ -9,8 +9,8 @@
                 {{ .PublishDate.Format "Jan 2, 2006" }}
             </div>
             <div>
-                {{ partial "icon.html" (dict "ctx" $ "name" "clock") }}
-                {{ .ReadingTime }} min read
+                {{ partial "icon.html" (dict "ctx" $ "name" "book") }}
+                {{ .WordCount }} words
             </div>
             {{ with .Params.categories }}
             <div>

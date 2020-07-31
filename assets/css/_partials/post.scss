@@ -50,12 +50,12 @@
             color: #87CEFA;
         }
         h3::before {
-            content: "|";
+            content: ">";
             margin-right: 5px;
             color: #87CEFA;
         }
         h4::before {
-            content: ">";
+            content: "?";
             margin-right: 5px;
             color: #87CEFA;
         }
@@ -71,11 +71,19 @@
             }
         }
         blockquote {
-            margin-left: 2rem;
-            margin-right: 3rem;
-            padding-left: 1rem;
-            border-left: 5px solid #f2777a;
-        }
+            font-size: 17px;
+            font-family: "Noto Serif TC", sans-serif;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 2%;
+            margin-right: 0%;
+            padding-left: 15px;
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            border-left: 3px solid #ccc;
+            background-color:#252529;
+          }
         code,
         pre {
             padding: 16px;
@@ -140,7 +148,7 @@
             height: auto;
             margin: 0 auto;
             overflow: hidden;
-            filter: brightness(30%)
+            filter: brightness(75%)
         }
         img[data-action="zoom"] {
             cursor: zoom-in;
